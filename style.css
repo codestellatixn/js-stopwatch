@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url('./fonts/pixel.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #E5D0AC;
+    background-image: radial-gradient(circle, #982b1c, #b26041, #ca9070, #e1bfa6, #f8ede3);
+
+    font-family: 'Pixel', serif;
+}
+
+.stopwatch {
+    width: 90%;
+    max-width: 600px;
+    background-color: #343131;
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+
+    padding: 40px 0;
+    color: #FAF7F0;
+    margin: 200px auto 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 20px;
+}
+
+.stopwatch H1 {
+    margin: 60px 0 10px 0;
+    font-size: 80px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.buttons img {
+    width: 70px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.buttons img:nth-child(2){
+    width: 90px;
+}
+
+#displayTime {
+    letter-spacing: 10px;
+}
