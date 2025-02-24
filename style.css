@@ -1,62 +1,130 @@
 @font-face {
-    font-family: 'Pixel';
-    src: url('./fonts/pixel.woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Pixel";
+  src: url("./fonts/pixel.woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #E5D0AC;
-    background-image: radial-gradient(circle, #982b1c, #b26041, #ca9070, #e1bfa6, #f8ede3);
+  background: #e5d0ac;
+  background-image: radial-gradient(
+    circle,
+    #982b1c,
+    #b26041,
+    #ca9070,
+    #e1bfa6,
+    #f8ede3
+  );
 
-    font-family: 'Pixel', serif;
+  font-family: "Pixel", serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  text-align: center;
+  min-width: 320px;
 }
 
 .stopwatch {
-    width: 90%;
-    max-width: 600px;
-    background-color: #343131;
-    background-size: cover;
-    background-position: center;
+  width: 90%;
+  max-width: 550px;
+  background-color: #343131;
 
-    text-align: center;
+  padding: 50px 20px;
+  color: #faf7f0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 
-    padding: 40px 0;
-    color: #FAF7F0;
-    margin: 200px auto 0;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
-.stopwatch H1 {
-    margin: 60px 0 10px 0;
-    font-size: 80px;
+.stopwatch h1 {
+  margin: 20px 0;
+  font-size: 5rem;
+  letter-spacing: 8px;
 }
 
 .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .buttons img {
-    width: 70px;
-    margin: 20px;
-    cursor: pointer;
+  width: 70px;
+  max-width: 80px;
+  cursor: pointer;
 }
 
-.buttons img:nth-child(2){
-    width: 90px;
+.buttons img:nth-child(2) {
+  width: 90px;
 }
 
-#displayTime {
-    letter-spacing: 10px;
+@media (max-width: 768px) {
+  .stopwatch {
+    max-width: 450px;
+  }
+
+  .stopwatch h1 {
+    font-size: 3.5rem;
+  }
+
+  .buttons img {
+    width: 65px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stopwatch {
+    width: 95%;
+    max-width: 400px;
+    padding: 30px 15px;
+  }
+
+  .stopwatch h1 {
+    font-size: 2.8rem;
+  }
+
+  .buttons img {
+    width: 55px;
+  }
+}
+
+@media (max-width: 400px) {
+  .stopwatch {
+    padding: 25px 10px;
+  }
+
+  .stopwatch h1 {
+    font-size: 2.2rem;
+  }
+
+  .buttons img {
+    width: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stopwatch {
+    max-width: 600px;
+    padding: 60px 30px;
+  }
+
+  .stopwatch h1 {
+    font-size: 5rem;
+  }
+
+  .buttons img {
+    width: 85px;
+  }
 }
